@@ -12,7 +12,7 @@ const { title, description, info } = entry?.data;
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
-      <h1 class="text-center font-normal" set:html={markdownify(title)} />
+      <h1 class="text-center font-normal">Contactez Cybtek</h1>
       <div class="section row pb-0">
         <div class="col-12 md:col-6 lg:col-7">
           <form class="contact-form" method="POST" action={contact_form_action}>
@@ -21,7 +21,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="name"
                 type="text"
-                placeholder="Name"
+                placeholder="Nom"
                 required
               />
             </div>
@@ -30,7 +30,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="email"
                 type="email"
-                placeholder="Your email"
+                placeholder="Votre email"
                 required
               />
             </div>
@@ -39,7 +39,7 @@ const { title, description, info } = entry?.data;
                 class="form-input w-full rounded"
                 name="subject"
                 type="text"
-                placeholder="Subject"
+                placeholder="Sujet"
                 required
               />
             </div>
@@ -47,22 +47,19 @@ const { title, description, info } = entry?.data;
               <textarea
                 class="form-textarea w-full rounded-md"
                 rows="7"
-                placeholder="Your message"></textarea>
+                name="message"
+                placeholder="Votre message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary"> Send Now</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
           </form>
         </div>
         <div class="content col-12 md:col-6 lg:col-5">
-          <h4 set:html={markdownify(info?.title)} />
-          <p class="mt-4" set:html={markdownify(info?.description)} />
-          <ul class="contact-list mt-5 list-none pl-0">
-            {
-              info?.contacts?.map((contact: string) => (
-                <li>
-                  <strong class="text-dark" set:html={markdownify(contact)} />
-                </li>
-              ))
-            }
+          <h4>Informations de contact</h4>
+          <p class="mt-4">Pour toute question ou demande d'information, n'hésitez pas à nous contacter via le formulaire ou directement par email.</p>
+          <ul class="contact-list">
+            <li>Email : contact@cybtek.fr</li>
+            <li>Téléphone : +33 1 23 45 67 89</li>
+            <li>Adresse : 123 Rue de l'Innovation, Paris, France</li>
           </ul>
         </div>
       </div>
