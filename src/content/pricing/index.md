@@ -1,54 +1,53 @@
 ---
-title: Pricing
-description: "meta description"
+title: "Tarification"
+description: "Découvrez nos plans tarifaires adaptés à vos besoins en intelligence artificielle."
 draft: false
 plans:
-- title: Basic Plan
-  subtitle: Best For Small Individuals
+- title: Plan de Base
+  subtitle: Idéal pour les petites entreprises
   price: 49
-  type: month
+  type: mois
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - Service Express 🚀
+    - Dédouanement 📦
+    - Services Critiques en Temps ⏱️
   button:
-    label: Get started for free
+    label: Commencez gratuitement
     link: "/contact"
 
-- title: Professional Plan
-  subtitle: Best For Professionals
+- title: Plan Professionnel
+  subtitle: Idéal pour les professionnels
   price: 69
-  type: month
+  type: mois
   recommended: true
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
-    - Cloud Service
-    - Best Dashboard
+    - Service Express 🚀
+    - Dédouanement 📦
+    - Services Critiques en Temps ⏱️
+    - Service Cloud ☁️
+    - Meilleur Tableau de Bord 📊
   button:
-    label: Get started
+    label: Commencez maintenant
     link: "/contact"
 
-- title: Business Plan
-  subtitle: Best For Large Individuals
+- title: Plan Entreprise
+  subtitle: Idéal pour les grandes entreprises
   price: 99
-  type: month
+  type: mois
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - Service Express 🚀
+    - Dédouanement 📦
+    - Services Critiques en Temps ⏱️
   button:
-    label: Get started
+    label: Commencez maintenant
     link: "/contact"
 
 call_to_action:
-  title: Need a larger plan?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  title: Besoin d'un plan plus grand ?
+  content: "Contactez-nous pour discuter de solutions sur mesure adaptées à vos besoins spécifiques en intelligence artificielle."
   image: '/images/cta.png'
   button:
     enable: true
-    label: "Contact Us"
+    label: "Contactez-nous"
     link: "/contact"
-    
 ---
