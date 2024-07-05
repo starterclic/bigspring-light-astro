@@ -15,32 +15,16 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
     <div class="container">
       <div class="row text-center">
         <div class="mx-auto lg:col-10">
-          <h1 class="font-primary font-bold">{banner?.title}</h1>
-          {
-            banner?.content && (
-              <p class="mt-4" set:html={markdownify(banner.content)} />
-            )
-          }
-
-          {
-            banner?.button?.enable && (
-              <a class="btn btn-primary mt-4" href={banner.button.link}>
-                {banner.button.label}
-              </a>
-            )
-          }
-
-          {
-            banner?.image && (
-              <Image
-                class="mx-auto mt-12"
-                src={banner?.image}
-                width={750}
-                height={390}
-                alt="banner image"
-              />
-            )
-          }
+          <h1 class="font-primary font-bold">Bienvenue chez Cybtek</h1>
+          <p class="mt-4">Votre partenaire clé en main pour les services d'intelligence artificielle. Nous offrons des solutions personnalisées pour les TPE et PME, incluant support hybride avec GPT et assistance humaine, formations, et accompagnement de projet.</p>
+          <a class="btn btn-primary mt-4" href="/contact">Contactez-nous</a>
+          <Image
+            class="mx-auto mt-12"
+            src="/images/banner-cybtek.png"
+            width={750}
+            height={390}
+            alt="Image de la bannière Cybtek"
+          />
         </div>
       </div>
     </div>
@@ -50,35 +34,24 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
   <section class="section bg-theme-light">
     <div class="container">
       <div class="text-center">
-        <h2>{markdownify(feature!.title)}</h2>
+        <h2>Nos Services</h2>
       </div>
       <div class="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          feature!.features.map((item: any, i: number) => (
-            <div class="feature-card rounded-xl bg-white p-5 pb-8 text-center">
-              {item.icon && (
-                // <Image
-                //   class="mx-auto"
-                //   src={item.icon}
-                //   width={30}
-                //   height={30}
-                //   alt=""
-                // />
-                <img
-                  class="mx-auto"
-                  alt={item.icon}
-                  src={item.icon}
-                  width={30}
-                  height={30}
-                />
-              )}
-              <div class="mt-4">
-                <p class="h5" set:html={markdownify(item!.name)} />
-                <p class="mt-3">{item.content}</p>
-              </div>
-            </div>
-          ))
-        }
+        <div class="feature-card rounded-xl bg-white p-5 pb-8 text-center">
+          <img class="mx-auto" src="/images/service-icon-1.png" width={30} height={30} alt="Icone Service 1" />
+          <h3 class="mt-4">Support Hybride</h3>
+          <p>Assistance 24/7 avec des chatbots GPT et un support humain via visio et téléassistance.</p>
+        </div>
+        <div class="feature-card rounded-xl bg-white p-5 pb-8 text-center">
+          <img class="mx-auto" src="/images/service-icon-2.png" width={30} height={30} alt="Icone Service 2" />
+          <h3 class="mt-4">Formations</h3>
+          <p>Des programmes de formation personnalisés pour maîtriser les outils d'IA.</p>
+        </div>
+        <div class="feature-card rounded-xl bg-white p-5 pb-8 text-center">
+          <img class="mx-auto" src="/images/service-icon-3.png" width={30} height={30} alt="Icone Service 3" />
+          <h3 class="mt-4">Accompagnement de Projet</h3>
+          <p>Support complet pour vos projets d'intelligence artificielle, de la conception à la mise en œuvre.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -177,12 +150,11 @@ const { banner, feature, services, workflow, call_to_action } = homepage.data;
     <div class="mb-8 text-center">
       <h2
         class="mx-auto max-w-[400px] font-bold leading-[44px]"
-        set:html={workflow?.title}
-      />
-      <p class="mt-3" set:html={workflow?.description} />
+      >Notre Processus</h2>
+      <p class="mt-3">Découvrez comment nous travaillons chez Cybtek pour fournir les meilleures solutions d'IA.</p>
     </div>
     <Image
-      src={workflow!.image}
+      src="/images/workflow-cybtek.png"
       alt="workflow image"
       width={1920}
       height={414}
