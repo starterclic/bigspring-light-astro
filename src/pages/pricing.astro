@@ -11,10 +11,38 @@ const { title, description, plans, call_to_action } = entry.data;
 <Base title={title} description={description}>
   <section class="section pb-0">
     <div class="container">
-      <h1 class="text-center font-normal">{title}</h1>
+      <h1 class="text-center font-normal">Nos Tarifs</h1>
       <div class="section row -mt-10 justify-center md:mt-0">
         {
-          plans?.map((plan: TPlan) => (
+          [
+            {
+              title: "Plan de Base",
+              price: "29",
+              type: "mois",
+              subtitle: "Accès aux fonctionnalités de base",
+              features: ["Support GPT", "Accès aux formations de base", "Assistance par email"],
+              button: { link: "/contact", label: "Souscrire" },
+              recommended: false
+            },
+            {
+              title: "Plan Standard",
+              price: "59",
+              type: "mois",
+              subtitle: "Fonctionnalités avancées",
+              features: ["Support GPT & Humain", "Accès aux formations avancées", "Assistance par chat"],
+              button: { link: "/contact", label: "Souscrire" },
+              recommended: true
+            },
+            {
+              title: "Plan Premium",
+              price: "99",
+              type: "mois",
+              subtitle: "Tous les services inclus",
+              features: ["Support 24/7", "Formations personnalisées", "Assistance par visio"],
+              button: { link: "/contact", label: "Souscrire" },
+              recommended: false
+            }
+          ].map((plan: TPlan) => (
             <div
               class={`col-12 md:col-4 ${
                 !plan.recommended ? "lg:px-0" : "col-recommended"
