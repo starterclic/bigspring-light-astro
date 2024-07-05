@@ -10,16 +10,33 @@ const { title, description, faqs } = entry.data;
 <Base title={title} description={description}>
   <section class="section">
     <div class="container">
-      <h1 class="text-center font-normal" set:html={markdownify(title)} />
+      <h1 class="text-center font-normal">Foire Aux Questions - Cybtek</h1>
       <div class="section row -mt-6">
         {
-          faqs?.map((faq) => (
+          [
+            {
+              title: "Quels services propose Cybtek?",
+              answer: "Cybtek propose des services d'assistance hybride avec GPT et des humains, des formations en intelligence artificielle, et un accompagnement complet pour vos projets d'IA."
+            },
+            {
+              title: "Comment puis-je contacter Cybtek?",
+              answer: "Vous pouvez nous contacter via le formulaire de contact sur notre site ou directement par email à contact@cybtek.fr."
+            },
+            {
+              title: "Quelles sont vos heures d'ouverture?",
+              answer: "Nous sommes disponibles 24/7 grâce à notre support hybride incluant des chatbots GPT et une assistance humaine."
+            },
+            {
+              title: "Offrez-vous des formations personnalisées?",
+              answer: "Oui, nous offrons des programmes de formation personnalisés pour aider les entreprises à maîtriser les outils d'IA."
+            }
+          ].map((faq) => (
             <div class="col-12 mt-6 md:col-6">
-              <div class="p-12  shadow">
+              <div class="p-12 shadow">
                 <div class="faq-head relative">
-                  <h4 set:html={markdownify(faq.title)} />
+                  <h4>{faq.title}</h4>
                 </div>
-                <p class="faq-body mt-4" set:html={markdownify(faq.answer)} />
+                <p class="faq-body mt-4">{faq.answer}</p>
               </div>
             </div>
           ))
